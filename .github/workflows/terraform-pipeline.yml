@@ -1,9 +1,8 @@
 name: 00-Terraform Pipeline
 
 on:
-  push:
   pull_request:
-    types: [opened, reopened, synchronize]
+    types: [closed]
   workflow_dispatch:
 
 permissions:
@@ -16,6 +15,7 @@ jobs:
   check:
     name: Check Configuration
     runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
     steps:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
