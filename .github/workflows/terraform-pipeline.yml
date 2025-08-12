@@ -2,7 +2,7 @@ name: 00-Terraform Pipeline
 
 on:
   pull_request:
-    types: [closed]
+    types: [opened, reopened, synchronize]
   workflow_dispatch:
 
 permissions:
