@@ -1,4 +1,6 @@
 # 04_06_ci_cd_for_infrastructure_as_code
+
+change to test trigger
 GitHub allows each step in a workflow to send text to the Actions interface using a variable called `GITHUB_STEP_SUMMARY`.
 
 `GITHUB_STEP_SUMMARY` is a variable that contains a path to a file where each step can store text.
